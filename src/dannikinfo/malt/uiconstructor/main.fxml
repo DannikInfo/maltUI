@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane fx:id="mainPane" prefHeight="250.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dannikinfo.malt.uiconstructor.Main">
+    <children>
+
+        <GridPane fx:id="settingsPane" minHeight="250" maxWidth="-Infinity" minWidth="0.0" prefWidth="400.0" style="-fx-background-color: #000000D0;" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+            <children>
+                <VBox>
+                    <children>
+                        <TextField fx:id="hexText" alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" onKeyReleased="#onTextFieldTextChanged" prefHeight="38.0" prefWidth="400" promptText="HEX Array" styleClass="textField" text="0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00" stylesheets="/Styles/textField.css" >
+                            <font>
+                                <Font size="12.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <HBox>
+                            <children>
+                                <!-- symbol pixel panel-->
+                                <!-- string 0 -->
+                                <CheckBox fx:id="pixel00" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="true" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="74" top="15.0" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel10" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="15.0" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel20" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="15.0" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel30" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="15.0" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel40" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="15.0" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel50" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="15.0" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel60" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="15.0" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel70" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="15.0" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <!--END string 0-->
+                            </children>
+                        </HBox>
+                        <HBox>
+                            <children>
+                                <!-- string 1 -->
+                                <CheckBox fx:id="pixel01" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="true" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="74" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel11" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel21" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel31" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel41" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel51" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel61" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel71" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <!--END string 1-->
+                            </children>
+                        </HBox>
+                        <HBox>
+                            <children>
+                                <!-- string 2 -->
+                                <CheckBox fx:id="pixel02" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="true" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="74" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel12" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel22" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel32" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel42" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel52" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel62" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel72" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <!--END string 2-->
+                            </children>
+                        </HBox>
+                        <HBox>
+                            <children>
+                                <!-- string 3 -->
+                                <CheckBox fx:id="pixel03" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="true" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="74" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel13" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel23" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel33" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel43" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel53" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel63" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel73" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <!--END string 3-->
+                            </children>
+                        </HBox>
+                        <HBox>
+                            <children>
+                                <!-- string 1 -->
+                                <CheckBox fx:id="pixel04" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="true" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="74" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel14" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel24" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel34" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel44" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel54" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel64" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel74" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <!--END string 4-->
+                            </children>
+                        </HBox>
+                        <HBox>
+                            <children>
+                                <!-- string 1 -->
+                                <CheckBox fx:id="pixel05" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="true" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="74" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel15" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel25" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel35" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel45" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel55" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel65" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel75" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <!--END string 5-->
+                            </children>
+                        </HBox>
+                        <HBox>
+                            <children>
+                                <!-- string 6 -->
+                                <CheckBox fx:id="pixel06" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="true" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="74" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel16" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel26" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel36" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel46" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel56" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel66" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel76" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <!--END string 6-->
+                            </children>
+                        </HBox>
+                        <HBox>
+                            <children>
+                                <!-- string 1 -->
+                                <CheckBox fx:id="pixel07" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="true" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="74" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel17" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel27" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel37" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel47" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel57" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel67" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="pixel77" onMouseClicked="#onCBClick" maxHeight="15.0" maxWidth="14.0" minHeight="15.0" minWidth="14.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="15.0" prefWidth="14.0" scaleShape="false" selected="false" styleClass="checkBox" stylesheets="/Styles/checkBox.css" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5" top="5" />
+                                    </HBox.margin>
+                                </CheckBox>
+                                <!--END string 7-->
+                            </children>
+                            <!--END PANEL-->
+                        </HBox>
+                    </children>
+                    <Button fx:id="clear" maxHeight="20" maxWidth="50" onMouseClicked="#clear" mnemonicParsing="false"  styleClass="defaultButton" stylesheets="/Styles/button.css" GridPane.columnIndex="1" text="Clear">
+                        <VBox.margin>
+                            <Insets left="15" bottom="15" />
+                        </VBox.margin>
+                    </Button>
+                </VBox>
+            </children>
+            <GridPane.margin>
+                <Insets />
+            </GridPane.margin>
+            <columnConstraints>
+                <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+            </rowConstraints>
+        </GridPane>
+
+    </children>
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+</GridPane>
