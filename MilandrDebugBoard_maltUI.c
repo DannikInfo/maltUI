@@ -38,10 +38,11 @@ const char arabic_Num[10][8] = {
         {0x00,0x7e,0x4a,0x4a,0x4a,0x4a,0x7a,0x00}, //6
         {0x00,0x02,0x02,0x02,0x02,0x02,0x7e,0x00}, //7
         {0x00,0x7e,0x4a,0x4a,0x4a,0x4a,0x7e,0x00}, //8
-        {0x00,0x4e,0x4a,0x4a,0x4a,0x4a,0x7e,0x00}, //9
+        {0x00,0x4e,0x4a,0x4a,0x4a,0x4a,0x7e,0x00} //9
 };
 
 const char lcdX[8] = {0xB8,0xB9,0xBA,0xBB,0xBC,0xBD,0xBE,0xBF};
+const char lcdY[16] = {0x01,0x02,0x04,0x08,0x10,0x20,0x30,0x80,0xA0,0xA2,0x80,0x80,0x80,0x80,0x80,0x80};
 
 void pause(int d){ // pause function ( d * 80 )
     d *= 80;
@@ -106,6 +107,7 @@ void printOnScreen(int x, int y, int symNum){
     }
 
     if(y >= 8){
+
         set_side(1);
     }
     if(y < 8) {
@@ -113,7 +115,7 @@ void printOnScreen(int x, int y, int symNum){
     }
 
     set_list(lcdX[x]);
-    set_line(0x40);
+    set_line(lcdY[y]);
 
     i = 0;
     while(i!=8) {
@@ -129,8 +131,8 @@ void printOnScreen(int x, int y, int symNum){
 }
 
 void write_null(){ // address nulling
-    //int i=64; // êîë âî äåéñòâèÿ ñ÷åò÷èêà maybe it need
-    //while (i!=0) { // öèêë
+    int i=64; // êîë âî äåéñòâèÿ ñ÷åò÷èêà maybe it need
+    while (i!=0) { // öèêë
         PORTE -> RXTX |= (1<<11); // set A0 - 1
         PORTC -> RXTX &= ~(1<<2); // set R/W - 0
         PORTC -> RXTX |= (1<<7); // strobbing on
@@ -138,22 +140,39 @@ void write_null(){ // address nulling
         pause(2); // pause
         PORTC -> RXTX &= ~(1<<7); // strobbing off
         pause(2); // pause
-    //    i--; // decrement
-    //}
-}
-
-void clean(){ //clean screen
-    int x = 0;
-    while(x < 8){
-        set_list(lcdX[x]);// set list from array
-        set_line(0x40); //set line constant because we work for 1 memory list
-        write_null();   //nulling address
-        x++
+        i--; // decrement
     }
 }
 
+void clean(){ // ??????? ???????
+set_list(0xB8); // ???? ?? ??????? set_list ???????? ?????? ?? b8 ?? bb
+set_line(0x40); // ???? ?? ??????? set_line ???????? ?????? 40 (0100000)
+write_null(); // ????? ??????? ?????????
+set_list(0xB9);
+set_line(0x40);
+write_null();
+set_list(0xBA);
+set_line(0x40);
+write_null();
+set_list(0xBB);
+set_line(0x40);
+write_null();
+set_list(0xBC);
+set_line(0x40);
+write_null();
+set_list(0xBD);
+set_line(0x40);
+write_null();
+set_list(0xBE);
+set_line(0x40);
+write_null();
+set_list(0xBF);
+set_line(0x40);
+write_null();
+}
+
 void main (void) { // main
-        
+
         RST_CLK ->PER_CLOCK = 0x02A00010; // clocking on (for port A, C, E?)
         // port À
         PORTA -> OE = 0x00ff; // data direction - to out
@@ -198,17 +217,18 @@ void main (void) { // main
         pause(2); // pause
         clean(); // clean display
 
-        printOnScreen(4, 0, 26);
-        printOnScreen(4, 1, 26);
-        printOnScreen(4, 2, 7); // print on screen HELLO WORLD on center of screen
-        printOnScreen(4, 3, 4); // screen is 16 x 8 HW message - 11 symbols
-        printOnScreen(4, 4, 11); // for centering start it from 3(2 from 0), just set on first 2 positions blank space
-        printOnScreen(4, 5, 11);
-        printOnScreen(4, 6, 14);
-        printOnScreen(4, 7, 26);
-        printOnScreen(4, 8, 22);
-        printOnScreen(4, 9, 14);
-        printOnScreen(4, 10, 17);
-        printOnScreen(4, 11, 11);
-        printOnScreen(4, 12, 3);
+        printOnScreen(2, 0, 26);
+        printOnScreen(2, 1, 26);
+        printOnScreen(2, 2, 7); // print on screen HELLO WORLD on center of screen
+        printOnScreen(2, 3, 4); // screen is 16 x 8 HW message - 11 symbols
+        printOnScreen(2, 4, 11); // for centering start it from 3(2 from 0), just set on first 2 positions blank space
+        printOnScreen(2, 5, 11);
+        printOnScreen(2, 6, 14);
+        printOnScreen(2, 7, 26);
+        printOnScreen(2, 8, 22);
+        printOnScreen(2, 9, 14);
+        printOnScreen(2, 10, 17);
+        printOnScreen(2, 11, 11);
+        printOnScreen(2, 12, 3);
 }
+
